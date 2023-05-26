@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart'; //we need material libreary,or we can use curpertion library or widgets library.
 import 'package:flutter_application_1/utils/routes.dart';
+import 'package:flutter_application_1/widgets/themes.dart';
 import 'pages/login_page.dart';
 import 'pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'widgets/themes.dart';
 
 //import 'package:flutter_application_1/home_page.dart';
 
@@ -21,14 +23,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+      theme: MyTheme.lightTheme,
+
       //debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.red,
-      ),
+      darkTheme: MyTheme.DarkTheme,
       //initialRoute: "/home",
       initialRoute: MyRoutes.homeRoute,
       routes: {
